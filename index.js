@@ -50,8 +50,24 @@ const listOfavailableBooks = ()=>{
     if(library[i].availability === true){
         theAvailableBook.push(library[i])
     }
-    console.log(theAvailableBook)
+    // console.log(theAvailableBook)
    }
    
 }
 listOfavailableBooks()
+
+
+const borrowBook = (bookName,holder)=>{
+    for(let i=0 ; i<library.length;i++){
+        if(bookName === library[i].title && library[i].availability ===true){
+           library[i].holder = holder;
+           library[i].availability = false
+            
+            // console.log('')
+        }
+    }
+  
+}
+borrowBook('Long Eagle','reine')
+// console.log(library)
+
