@@ -36,7 +36,7 @@ const addBook =(title,author,availability='true')=>{
    
    library.push(newBook)
 
-   console.log(`the book ${title} has been added succesifully`)
+//    console.log(`the book ${title} has been added succesifully`)
 }
 
 addBook('forever','marie',true);
@@ -44,3 +44,14 @@ addBook('forever','marie',true);
 
 // console.log(library)
 
+const listOfavailableBooks = ()=>{
+   var theAvailableBook =[]
+   for(let i=0;i<library.length;i++){
+    if(library[i].availability === true){
+        theAvailableBook.push(library[i])
+    }
+    console.log(theAvailableBook)
+   }
+   
+}
+listOfavailableBooks()
