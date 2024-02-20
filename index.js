@@ -71,3 +71,18 @@ const borrowBook = (bookName,holder)=>{
 borrowBook('Long Eagle','reine')
 // console.log(library)
 
+
+const givingBackBook = (bookName,holder)=>{
+    for (let i =0;i<library.length;i++){
+        if(library[i].title === bookName && library[i].availability ===false&&(library[i].holder ===holder)){
+            library[i].holder = '';
+            library[i].availability = true
+            library[i].title = bookName
+        }
+        // console.log('thanks for returning the book')
+    }
+    console.log('thanks for returning the book')
+
+}
+givingBackBook('Atomic Habits','Aline')
+console.log(library)
